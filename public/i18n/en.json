@@ -1,0 +1,16 @@
+{
+    "app":{
+        "tittle": "Open Location Data"
+    },
+    "source":{
+        "tittle":"Location Data of IPs"
+    },
+    "card":{
+        "see":"See Flag",
+        "view":"View Map"
+    },
+    "footer":{
+        "copy":"Copyright © 2025 Open Location Data. All rights reserved.",
+        "develop":"Developed by"
+    }
+}

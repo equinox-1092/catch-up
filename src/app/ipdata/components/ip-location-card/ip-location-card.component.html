@@ -1,0 +1,23 @@
+<mat-card class="ip-location-card">
+    <mat-card class="ip-location-card" *ngIf="ipLocation">
+        <mat-card-header>
+          <mat-card-title>{{ ipLocation.ip }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="location-details" *ngIf="ipLocation.continent_name">
+            <p><strong>Continent:</strong> {{ ipLocation.continent_name }}</p>
+            <p><strong>Country:</strong> {{ ipLocation.country_name }}</p>
+            <p><strong>Region:</strong> {{ ipLocation.region_name }}</p>
+            <p><strong>City:</strong> {{ ipLocation.city }}</p>
+          </div>
+        </mat-card-content>
+        <mat-card-actions *ngIf="ipLocation.continent_name">
+          <a [href]="ipLocation.country_flag" target="_blank"  class="action-button" color="primary" mat-button>
+            {{ 'card.see' | translate }}
+          </a>
+          <a [href]="'https://maps.google.com/?q=' + ipLocation.latitude + ',' + ipLocation.longitude" target="_blank" class="action-button" color="primary" mat-button>
+            {{ 'card.view' | translate }}
+          </a>
+        </mat-card-actions>
+      </mat-card>
+</mat-card>
